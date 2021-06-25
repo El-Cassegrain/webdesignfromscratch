@@ -1,0 +1,9 @@
+/* First import my custom */
+@import './sources/scss/variables';
+@import './sources/scss/mixins';
+@import './sources/scss/global';
+
+/* Then import Bootstrap */
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+/* Main styles override Bootstrap */
