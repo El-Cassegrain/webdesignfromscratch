@@ -1,0 +1,59 @@
+/* Home styles */
+.bg-watermark {
+    background: url('./../../src/assets/img/watermark.svg') no-repeat center center;
+}
+.title {
+    font-size: 3rem;
+    position: relative;
+    display: inline-block;
+    max-width: 360px;
+    .title2 {
+        box-sizing: border-box;
+        width: 200px;
+        position: absolute;
+        display: block;
+        color: $primary;
+        font-family: $font-title;
+        margin-left: 30px;
+        bottom: -25px;
+        font-size: 1.9rem;
+        text-decoration: underline dashed;
+    }
+}
+
+p.subtitle {
+    font-weight: 500;
+}
+
+@media screen and (min-width: 992px){
+    .title {
+        font-size: 4rem;
+        .title2 {
+            margin-left: 120px;
+        }
+    }
+    .hero-text {
+        max-width: 360px;
+    }
+    .max-width {
+        max-width: 600px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .title {
+        margin-left: -50px;
+        &::after {
+            left: 87px;
+        }
+    }
+}
+
+@media screen and (min-width: 1400px){
+    .title2 {
+        margin-left: 170px;
+    }
+    .max-width {
+        margin-left: 800px !important;
+    }
+}

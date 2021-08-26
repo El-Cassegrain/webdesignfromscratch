@@ -1,0 +1,151 @@
+@import '../../sources/scss/variables';
+
+/* Header styles */
+.header-top {
+    background-color: $light-green;
+}
+
+#baseline {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#menu-button {
+    svg > path {fill: $primary}
+}
+
+.nav-link {
+    font-weight: 300;
+    padding: 0;
+}
+
+.nav-link.active {
+    background-color: $light-green;
+    border-radius: 4px;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+    font-weight: 500;
+}
+
+.nav-item {
+    position: relative;
+    margin: 0 4px;
+    &::after {
+        content: "";
+        height: 1px;
+        border-bottom: 1px dashed $primary;
+        display: block;
+        width: 0%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        
+    }
+    &:last-child {
+        &:hover, &:focus{
+        &::after {
+            display: none;
+        }
+    }
+    }
+    &:hover,
+    &:focus {
+        
+        &::after {
+            content: "";
+            opacity: 1;
+            transition: all ease 0.25s 0.015s;
+            width: 82%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+    &:not(:hover){
+        &::after {
+            width: 0%;
+            left: 0;
+            transform: translateX(200%);
+            transition: all ease 1s 0.015s;
+        }
+    }
+}
+
+.svg-wrapper {
+    //width: 141px;
+    cursor: pointer;
+    padding-right: 0;
+
+    #logo {
+        .st0 {
+            fill: #fff
+        }
+
+        .st1 {
+            fill: #262D1E
+        }
+
+        .st2 {
+            fill: #8BC34A
+        }
+
+        width: 8rem;
+
+        #bg {
+            fill: #fff;
+        }
+
+        #middle,
+        #left,
+        #right {
+            transform-origin: center;
+            transition: all ease-out 0.75s 0.015s;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        #logo {
+
+            #left,
+            #middle,
+            #right {
+                fill: #8bc34a;
+                transform: rotateZ(0deg);
+                animation: animate cubic-bezier(.77, -0.65, .36, 1.46) 0.51s 0.005s;
+            }
+
+            #right {
+                fill: #8bc34a
+            }
+        }
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(10px)
+    }
+
+    22% {
+        transform: translateY(-8px) rotateZ(-8deg)
+    }
+
+    60% {
+        transform: translateY(5px)
+    }
+
+    100% {
+        transform: translateY(0) rotateZ(360deg)
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .header-top {
+        background-color: #fefefe !important;
+    }
+
+    .svg-wrapper {
+        padding: 25px;
+    }
+}

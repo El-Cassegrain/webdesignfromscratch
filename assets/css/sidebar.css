@@ -1,0 +1,65 @@
+/* Sidebar styles */
+.sidebar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px;
+  position: fixed;
+  height: calc(100vh - 50px);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: 0;
+  background-color: rgba(36, 36, 36, 0.6);
+  padding-bottom: 35px;
+}
+
+.sidebar .sidebar-element {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 25px;
+  padding-top: 35px;
+  padding-bottom: 12px;
+  cursor: pointer;
+  color: #fefefe;
+  text-decoration: none;
+}
+
+.show-enter-to {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.show-leave-to {
+  opacity: 0;
+  -webkit-transform: translateX(250px);
+          transform: translateX(250px);
+}
+
+.show-enter-active, .show-leave-active {
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.fade-enter {
+  opacity: 0;
+  -webkit-transform: translateX(60px);
+          transform: translateX(60px);
+}
+
+.fade-enter-active {
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-transition-delay: calc( 50ms * var(--index));
+          transition-delay: calc( 50ms * var(--index));
+}
+/*# sourceMappingURL=sidebar.css.map */

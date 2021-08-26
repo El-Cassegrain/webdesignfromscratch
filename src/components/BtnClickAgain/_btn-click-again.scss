@@ -1,0 +1,15 @@
+/* Style confettis */
+.slot {
+    position: relative;
+    perspective: 1000px;
+    div {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        user-select: none;
+    }
+}

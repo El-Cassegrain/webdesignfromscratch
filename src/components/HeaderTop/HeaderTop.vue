@@ -1,44 +1,71 @@
 <template>
     <div>
-        <header>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+        <header class="header-top">
+            <nav class="navbar sticky-top navbar-expand-lg navbar-light p-lg-0">
+                <div class="container-fluid ps-lg-0">
+                    <a class="navbar-brand pt-lg-0" href="#">
+
+                        <!-- On SM -->
+                        <div class="logo-sm d-lg-none">
+                            <svg id="logo-small" xmlns="http://www.w3.org/2000/svg" width="42.744" height="24.914"
+                                viewBox="0 0 42.744 24.914">
+                                <path id="Rectangle_11" data-name="Rectangle 11"
+                                    d="M4.99,0H7.338a0,0,0,0,1,0,0V20.4a3.669,3.669,0,0,1-3.669,3.669h0A3.669,3.669,0,0,1,0,20.4V4.99A4.99,4.99,0,0,1,4.99,0Z"
+                                    transform="translate(0 3.101) rotate(-25)" fill="#262d1e" />
+                                <path id="Rectangle_12" data-name="Rectangle 12"
+                                    d="M4.99,0H7.338a0,0,0,0,1,0,0V20.4a3.669,3.669,0,0,1-3.669,3.669h0A3.669,3.669,0,0,1,0,20.4V4.99A4.99,4.99,0,0,1,4.99,0Z"
+                                    transform="translate(12.961 3.101) rotate(-25)" fill="#262d1e" />
+                                <path id="Rectangle_13" data-name="Rectangle 13"
+                                    d="M4.99,0H7.338a0,0,0,0,1,0,0V20.4a3.669,3.669,0,0,1-3.669,3.669h0A3.669,3.669,0,0,1,0,20.4V4.99A4.99,4.99,0,0,1,4.99,0Z"
+                                    transform="translate(25.922 3.101) rotate(-25)" fill="#8bc34a" />
+                            </svg>
+
+                        </div>
+
+                        <!-- On LG -->
+                        <div class="svg-wrapper d-none d-lg-block">
+                            <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                viewBox="0 0 141 113" style="enable-background:new 0 0 141 113;" xml:space="preserve">
+                            <rect id="bg" class="st0" width="141" height="113"/>
+                            <path id="left" class="st1" d="M48.7,38.8l2.8-1.3l0,0L62.9,62c1.1,2.4,0.1,5.3-2.4,6.5c0,0,0,0,0,0l0,0c-2.4,1.1-5.3,0.1-6.5-2.4
+                                l-8.6-18.5C43.9,44.3,45.4,40.4,48.7,38.8C48.7,38.8,48.7,38.8,48.7,38.8z"/>
+                            <path id="middle" class="st1" d="M65.8,38.8l2.8-1.3l0,0L80.1,62c1.1,2.4,0.1,5.3-2.4,6.5c0,0,0,0,0,0l0,0c-2.4,1.1-5.3,0.1-6.5-2.4
+                                l-8.6-18.5C61.1,44.3,62.5,40.4,65.8,38.8C65.8,38.8,65.8,38.8,65.8,38.8z"/>
+                            <path id="right" class="st2" d="M83,38.8l2.8-1.3l0,0L97.3,62c1.1,2.4,0.1,5.3-2.4,6.5c0,0,0,0,0,0l0,0c-2.4,1.1-5.3,0.1-6.5-2.4
+                                l-8.6-18.5C78.3,44.3,79.7,40.4,83,38.8C83,38.8,83,38.8,83,38.8z"/>
+                            </svg>
+                        </div>
+                    </a>
+
+                    <span id="baseline" class="d-lg-none">Webdesignfromscratch</span>
+
+                    <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation" id="menu-button" @click="$emit('togglenav')">
+                        <fa-icon :icon="['fas', 'bars']" />
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto me-5">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
+                                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                <a class="nav-link" href="#">Ressources</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Cours</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Challenges</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item"><button class="btn btn-soutien me-lg-4" data-bs-toggle="modal" data-bs-target="#rangeModal">Soutenir</button></li>
                         </ul>
-                        <form class="d-flex">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+                        
                     </div>
                 </div>
             </nav>
@@ -47,9 +74,9 @@
 </template>
 
 <script>
-export default {
-    name: "HeaderTop"
-}
+    export default {
+        name: "HeaderTop"
+    }
 </script>
 
 <style lang="css" :src="../../assets/css/header-top.css">

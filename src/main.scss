@@ -2,8 +2,67 @@
 @import './sources/scss/variables';
 @import './sources/scss/mixins';
 @import './sources/scss/global';
+@import './components/HeaderTop/header-top';
+@import './components/Sidebar/sidebar';
+@import './components/Home/home';
+@import './components/AnimatedInterface/interface-animated';
+@import './components/BtnClickAgain/btn-click-again';
 
 /* Then import Bootstrap */
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 
 /* Main styles override Bootstrap */
+body {
+    font-family: $font-content !important;
+    color: $dark;
+    background: #fefefe;
+}
+
+.btn-soutien {
+    background-color: $primary;
+    border-top-right-radius: 0;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-left: 5px;
+    color: $light-green;
+    transition: all ease 0.4s;
+
+    &:hover, &:focus {
+        border-top-right-radius: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        transition: all ease 0.35s;
+        color: white;
+        background-color: darken($primary, 4%);
+    }
+}
+
+.main-btn {
+    border: 1px solid $primary;
+    box-shadow: 0 4px 0 2px $primary;
+    transition: color 0.15s ease-in, box-shadow 0.025s ease-in-out;
+    font-family: $font-title;
+    &:hover, &:focus {
+        color: $primary;
+        box-shadow: 0 4px 0 2px lighten($primary, 11%);
+    }
+    &:active {
+        box-shadow: 0 0 0 0 $secondary;
+        transition: all 0.025s ease-in;
+        transform: translateY(2px);
+    }
+}
+
+.btn-link {
+    font-family: $font-title;
+
+}
+
+/* Range */
+.slider-tooltip {
+    background: var(--slider-connect-bg);
+    border: 1px solid var(--slider-connect-bg);
+}
+
