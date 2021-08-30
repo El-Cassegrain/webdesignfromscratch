@@ -1,7 +1,7 @@
 <template>
     <div>
-        <header class="header-top">
-            <nav class="navbar sticky-top navbar-expand-lg navbar-light p-lg-0">
+        <header class="header-top sticky-top">
+            <nav class="navbar navbar-expand-lg navbar-light p-lg-0">
                 <div class="container-fluid ps-lg-0">
                     <a class="navbar-brand pt-lg-0" href="#">
 
@@ -46,36 +46,44 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mb-2 mb-lg-0 ms-auto me-5">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                                <router-link to="/" class="nav-link">Accueil</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Ressources</a>
+                                <router-link to="/ressources" class="nav-link">Ressources</router-link>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Cours</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Challenges</a>
+                                <router-link to="/challenges" class="nav-link">Challenges</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Blog</a>
+                                <router-link to="/blog" class="nav-link">Blog</router-link>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
+                                <router-link to="/contact" class="nav-link">Contact</router-link>
                             </li>
                             <li class="nav-item"><button class="btn btn-soutien me-lg-4" data-bs-toggle="modal" data-bs-target="#rangeModal">Soutenir</button></li>
                         </ul>
                         
                     </div>
                 </div>
+
+                
             </nav>
+            
+
+            
         </header>
+
+        <!-- Router view -->
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
     export default {
-        name: "HeaderTop"
+        name: "HeaderTop",
     }
 </script>
 

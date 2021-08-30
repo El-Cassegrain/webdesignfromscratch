@@ -2,11 +2,11 @@
     <transition name="show">
         <div class="sidebar" v-if="open">
             <button class="navbar-toggler" id="close-btn" type="button" @click="$emit('closenav')"><span>&times;</span></button>
-            <transition-group appear name="fade">
-                <a href="#" class="sidebar-element" v-for="(item, index) in navElements" :key="index" :style="{'--index': index}">
+            <transition-group appear name="fade" v-for="(item, index) in navElements" :key="index" :style="{'--index': index}">
+                <router-link :to="item.to" class="sidebar-element">          
                     <fa-icon class="icon pe-2" :icon="['fas', item.icon[0]]" :size="item.icon[1]" />
                     <span class="nav-item">{{ item.link }}</span>
-                </a>
+                </router-link>
             </transition-group>
         </div>
     </transition>
@@ -24,23 +24,28 @@ export default {
             navElements: [ 
                 {
                     icon: ['home', '2x'],
-                    link: 'Accueil'
+                    link: 'Accueil',
+                    to: '/'
                 },
                 {
                     icon: ['cogs', '2x'],
-                    link: 'Ressources'
+                    link: 'Ressources',
+                    to: '/ressources'
                 },
                 {
                     icon: ['th', '2x'],
-                    link: 'Challenges'
+                    link: 'Challenges',
+                    to: '/challenges'
                 },
                 {
                     icon: ['feather-alt', '2x'],
-                    link: 'Blog'
+                    link: 'Blog',
+                    to: '/blog'
                 },
                 {
                     icon: ['paper-plane', '2x'],
-                    link: 'Contact'
+                    link: 'Contact',
+                    to: '/contact'
                 }
             ]
         }       

@@ -44,7 +44,6 @@ import Range from "./../Range/Range.vue";
             background-color: white;
 
             .modal-header {
-                border-bottom: none;
                 display: block;
 
                 button {
@@ -68,6 +67,7 @@ import Range from "./../Range/Range.vue";
 
             .modal-body {
                 border-color: none;
+                margin-top: 25px;
             }
 
             .modal-footer {
